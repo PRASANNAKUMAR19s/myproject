@@ -44,21 +44,6 @@ return (
         <div className="login-card">
             <h3 className="text-center mb-4">{isLoginMode ? "Login" : "Create Account"}</h3>
             
-            <div className="mode-toggle">
-                <button 
-                    className={`mode-btn ${isLoginMode ? 'active' : ''}`}
-                    onClick={() => setIsLoginMode(true)}
-                >
-                    Login
-                </button>
-                <button 
-                    className={`mode-btn ${!isLoginMode ? 'active' : ''}`}
-                    onClick={() => setIsLoginMode(false)}
-                >
-                    Register
-                </button>
-            </div>
-            
             <form onSubmit={handleSubmit}>
                 {!isLoginMode && (
                     <div className="mb-3">
