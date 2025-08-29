@@ -133,7 +133,9 @@ return (
 
                 <p className="text-center">
                     {isLoginMode ? "Don't have an account?" : "Already have an account?"}{" "}
-                    <a onClick={switchMode}>
+                    <a  className={`mode-btn ${!isLoginMode ? 'active' : ''}`}
+                    onClick={() => setIsLoginMode(false)
+                        onClick={switchMode}>
                         {isLoginMode ? "Sign Up" : "Login"}
                     </a>
                 </p>
